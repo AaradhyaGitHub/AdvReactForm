@@ -93,6 +93,19 @@ This creates a smooth and responsive user experience while ensuring data consist
 - `useOptimistic` helps give instant feedback while waiting for a backend response.
 - The UI automatically resets if the backend request fails.
 - `useActionState` manages form submission state.
+- You can define functions which can be passed as values to `action` prop in form elements.
+- You can also do this to buttons.
+- React ensures these action functions are envoked and provides us with the `formData` automatically.
+- It also automatically resets the form which can be problem. `useActionState` comes in handy here. 
+- `useActionState` allows us to return a value and we can use that to update the UI. Populate, re-populate, show error etc 
+- useContext can also now be used inside the form action function or we can send requests to the backend directly 
+- `formActions` can be async
+- If they are async, we can use additional hooks like `useFormStatus` which helps us work during the pending stage of form       submission. Refer to the `Submit.jsx` file 
+- Lastly, we can use `useOptimistic` hook to set temporary state which will be thrown away once the action form is done 
+- This all is ultimately powered by the form action inside React. 
+
+
 
 With this setup, we provide a better UX without risking data inconsistency. 🚀
 
+Key Take
